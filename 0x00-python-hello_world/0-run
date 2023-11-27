@@ -1,4 +1,2 @@
 #!/bin/bash
-
-pyfile="$PYFILE"
-python3 "$pyfile"
+python3 "$PYFILE"
