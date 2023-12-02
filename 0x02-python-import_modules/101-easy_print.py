@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-exec("print('#pythoniscool')")
+if hasattr(__builtins__, 'print'):
+    getattr(__builtins__, 'print')("#pythoniscool")
