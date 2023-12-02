@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 import dis
-import sys
+import hidden_4
 
-if sys.version_info.major == 3 and sys.version_info.minor == 8:
-    with open("hidden_4.pyc", "rb") as f:
-        code = compile(f.read(), "hidden_4.pyc", "exec")
-        
-    for c in code.co_consts:
-        if isinstance(c, (str, bytes)) and not c.startswith("__"):
-            print(c)
-else:
-    print("Please run the script in Python 3.8.x.")
+if __name__ == "__main__":
+    names = [name for name in dir(hidden_4) if not name.startswith("__")]
+    names.sort()
+
+    for name in names:
+        print(name)
